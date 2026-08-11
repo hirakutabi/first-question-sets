@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ひらくたび 問題ファイル</title>
+
+  <style>
+    :root {
+      font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans JP",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      color: #222;
+      background: #f7f7f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px 14px 40px;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 4px 0 8px;
+      text-align: center;
+      font-size: 1.65rem;
+      line-height: 1.4;
+    }
+
+    .lead {
+      margin: 0 auto 26px;
+      max-width: 560px;
+      text-align: center;
+      color: #666;
+      line-height: 1.7;
+      font-size: 0.98rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 14px;
+    }
+
+    .book {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      text-align: center;
+      background: #fff;
+      border: 1px solid #e4e4e4;
+      border-radius: 16px;
+      padding: 14px 10px 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: transform 0.08s ease, box-shadow 0.08s ease;
+    }
+
+    .book:active {
+      transform: translateY(1px);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .book img {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      margin: 0 auto 12px;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+
+    .book-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin-bottom: 5px;
+    }
+
+    .book-note {
+      color: #777;
+      font-size: 0.84rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      color: #888;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>ひらくたび 問題ファイル</h1>
+
+    <p class="lead">
+      追加したい問題集をタップしてください。<br>
+      問題ファイル（TSV）がダウンロードされます。
+    </p>
+
+    <div class="grid">
+
+      <!-- ===== 問題セット 1 ===== -->
+      <a class="book" href="中1夏国語.tsv" download>
+        <img src="icons/kanji.png" alt="国語 中1の夏">
+        <div class="book-title">国語　中1の夏</div>
+        <div class="book-note">漢字の練習問題</div>
+      </a>
+
+      <!-- ===== 問題セット 2 ===== -->
+      <a class="book" href="nissho_bookkeeping_3_v4_200.tsv" download>
+        <img src="icons/boki.png" alt="簿記入門">
+        <div class="book-title">簿記入門</div>
+        <div class="book-note">簿記の基本問題</div>
+      </a>
+
+      <!-- ===== 問題セット 3 ===== -->
+      <a class="book" href="special_reading_compounds_v2_unique_200.tsv
+v" download>
+        <img src="icons/ji.png" alt="特別な読み方をする漢字">
+        <div class="book-title">特別な読み方をする漢字</div>
+        <div class="book-note">読み方に特徴のある漢字</div>
+      </a>
+
+        <a class="book" href="test/hirakutabi_test_general_10_v1.tsv" download>
+          <img src="icons/check.png" alt="check">
+          <div class="book-title">テスト問題</div>
+          <div class="book-note">フォーマットクリア</div>
+        </a>
+        <a class="book" href="test/hirakutabi_test_warning_10_v1.tsv" download>
+          <img src="icons/warning.png" alt="warning">
+          <div class="book-title">警告問題</div>
+          <div class="book-note">問題があります</div>
+        </a>
+        <a class="book" href="test/hirakutabi_test_partial_error_10_v1.tsv" download>
+          <img src="icons/error.png" alt="error">
+          <div class="book-title">部分エラー問題</div>
+          <div class="book-note">読み飛ばし</div>
+        </a>
+
+      <!--
+        問題セットを追加するときは、
+        上の <a class="book"> ... </a> を丸ごとコピーして、
+        次の3か所だけ書き換えればOKです。
+
+        1. href="問題ファイル.tsv"
+        2. src="icons/アイコン画像.jpg"
+        3. 表示タイトルと説明
+
+        例：
+
+        <a class="book" href="eiken2_v1.tsv" download>
+          <img src="icons/eiken2_v1.jpg" alt="英検2級">
+          <div class="book-title">英検2級</div>
+          <div class="book-note">英検2級レベルの4択問題</div>
+        </a>
+      -->
+
+    </div>
+
+    <footer>
+      ダウンロードしたファイルは「ひらくたび」から読み込んでください。
+    </footer>
+  </main>
+</body>
+</html>
