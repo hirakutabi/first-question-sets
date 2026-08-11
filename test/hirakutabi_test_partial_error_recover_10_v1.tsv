@@ -1,5 +1,5 @@
 # set_id=test_partial_error_10_v1
-# title=テスト用・2問エラー10問
+# title=テスト用・2問エラー10問修正版
 # version=1
 id	prompt	keyword	explanation	correct_index	choice_a	choice_b	choice_c	choice_d
 test_q01	日本の首都はどこですか。	地理	日本の首都は東京です。	0	東京	大阪	京都	札幌
